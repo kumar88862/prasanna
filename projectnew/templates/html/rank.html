@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+ .btn {
+   background-color: DodgerBlue;
+   border: none;
+   color: white;
+   padding: 12px 20px;
+   font-size: 16px;
+   cursor: pointer;
+   margin-left: 650px;
+ }
+
+ /* Darker background on mouse-over */
+ .btn:hover {
+   background-color: RoyalBlue;
+ }
+ </style>
+
+  </head>
+  <body>
+    {%if list%}
+    <table class="table table-bordered">
+      <tr>
+        <th>NAME</th>
+        <th>ROLL-NO</th>
+        <th>TELUGU</th>
+        <th>HINDI</th>
+        <th>ENGLISH</th>
+        <th>MATHS</th>
+        <th>SCIENCE</th>
+        <th>SOCIAL</th>
+        <th>TOTAL</th>
+        <th>GPA</th>
+        <th>PRECENTAGE</th>
+      </tr>
+      {%for l in list%}
+
+      <tr>
+        <td>{{l.name}}</td>
+        <td>{{l.rollno}}</td>
+        <td>{{l.telugu}}</td>
+        <td>{{l.hindi}}</td>
+        <td>{{l.english}}</td>
+        <td>{{l.maths}}</td>
+        <td>{{l.science}}</td>
+        <td>{{l.social}}</td>
+       <td>{{l.total}}</td>
+        <td>{{l.gpa}}</td>
+        <td>{{l.per}}</td>
+      </tr>
+      {%endfor%}
+
+      </table>
+      {%else%}
+      <p>no data found</p>
+      {%endif%}
+
+    <a href="/index">  <button class="btn"><i class="fa fa-close"></i> Close</button></a>
+  </body>
+</html>

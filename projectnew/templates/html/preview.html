@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    <style>
+
+    #ku {
+   background-color: #0000;
+   width: 600px;
+   border: 5px solid #84C0DE;
+   border-radius: 60px;
+   padding: 50px;
+   padding-top: 20px;
+   margin-left: 350px;
+   }
+table {
+
+  border-collapse: collapse;
+  width: 100%;
+
+}
+pre{
+  text-align: center;
+  font-size: 20px;
+  font-family: arial, sans-serif;
+  font-weight: 900
+}
+
+th{
+  text-align: left;
+  border: 1px solid #dddddd
+  padding: 8px;
+}
+td{
+  text-align: center;
+  border: 1px solid #dddddd
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+h1{
+  text-align: center;
+}
+
+
+
+.btn {
+background-color: DodgerBlue;
+border: none;
+color: white;
+padding: 12px 20px;
+font-size: 16px;
+cursor: pointer;
+margin-left: 650px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+background-color: RoyalBlue;
+}
+</style>
+
+
+</style>
+
+  </head>
+  <h1>MARKS MEMO</h1>
+  <div id="ku">
+
+  <body>
+    <p><pre>NAME    :    {{form.name}}</pre></p>
+    <p><pre>ROLL-NO :    {{form.roll}}</pre></p>
+
+    {%if form%}
+    <table class="table table-bordered">
+      <tr>
+
+        <th>TELUGU</th>
+        <td>{{form.telugu}}</td>
+
+      </tr>
+
+      <tr>
+
+        <th>HINDI</th>
+        <td>{{form.hindi}}</td>
+
+      </tr>
+
+        <tr>
+
+
+        <th>ENGLISH</th>
+         <td>{{form.english}}</td>
+
+         </tr>
+
+<tr>
+
+        <th>MATHS</th>
+        <td>{{form.maths}}</td>
+        </tr>
+
+    <tr>
+
+        <th>SCIENCE</th>
+        <td>{{form.science}}</td>
+
+     </tr>
+
+<tr>
+
+        <th>SOCIAL</th>
+  <td>{{form.social}}</td>
+      </tr>
+
+<tr>
+
+        <th>TOTAL</th>
+        <td>{{form.total}}</td>
+  </tr>
+    <tr>
+
+        <th>GPA</th>
+    <td>{{form.gpa}}</td>
+</tr>
+
+
+
+      </tr>
+        <th>PRECENTAGE</th>
+<td>{{form.per}}</td>
+      <tr>
+
+
+
+
+
+
+
+
+
+      </table>
+      {%else%}
+      <p>no data found</p>
+      {%endif%}
+    </div>
+    <a href="/index">  <button class="btn"><i class="fa fa-close"></i> Close</button></a>
+  </body>
+</html>
